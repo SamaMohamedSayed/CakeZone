@@ -1,0 +1,813 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.first-nav{
+    background-color: #FAF3EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height: 100px;
+    width: 100%;
+}
+.first-nav-content{
+    display: flex;
+    margin: auto;  
+}
+.first-nav .icon{
+    color: #E88F2A;
+    font-size: 35px;
+    margin-right: 10px;
+}
+.first-nav h4{
+    text-transform: uppercase;
+    display: flex;
+    font-size: 18px;
+}
+.first-nav h2{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+}
+.cake .icon{
+    color: black;
+}
+.first-nav .cake{
+    border:1px solid white;
+    background-color: #E88F2A;
+    outline: 10px solid #E88F2A;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px ;
+    height: 80px;
+    gap: 10px;
+}
+.second-nav{
+    background-color: #2B2825;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.second-nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width:55%;
+    padding: 30px;
+}
+.second-nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+.second-nav ul li a:hover{
+    color: #E88F2A;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  width:180px;
+}
+.dropdown-content a.list{
+    color:rgba(30, 28, 28, 0.842);
+    display: block;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    letter-spacing: 0.7px;
+    text-align: left;
+    color: rgba(45, 45, 45, 0.849);
+    font-weight: 400;
+    margin: 7px;
+}
+.dropdown-content a.list:hover{
+    background-color: rgb(225, 219, 219);
+    color: rgba(45, 45, 45, 0.849);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#home{
+    background-image: url("img/hero.jpg");
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+#home .container{
+     position: absolute;
+     top: 40%;
+     left: 9%;
+     color: white;
+}
+#home h4,#about h4,#menu h4,#chef h4,#order h4,#test h4{
+    text-transform: capitalize;
+    color: #E88F2A;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+}
+#home h1,#home h3{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#home h1{
+   font-size: 60px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+#home h3{
+    font-size: 30px;
+}
+#home .btn-video{
+    display:flex;
+    margin: auto;
+    margin-top: 60px;
+}
+#home .read-btn,#service .order-btn{
+    border: 1px solid white;
+    background-color: #E88F2A;
+    outline: 10px solid #E88F2A;
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+#home .read-btn:hover,#service .order-btn:hover
+,#order .shop-btn:hover{
+     background-color: #e6983fdc;
+     outline-color:#e6983fdc;
+     color: black;
+     cursor: pointer;
+}
+.play-video button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    animation: pulse 3s ease infinite;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(202, 195, 195, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px 20px rgba(202, 195, 195, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(202, 195, 195, 0.1); 
+    }
+
+}
+.play-video button :hover{
+    cursor:pointer;
+}
+.circle{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border:1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+}
+.triangle{
+    display: flex;
+    margin: auto;
+    margin: 13px auto auto 22px;
+    height: 30px;
+    width: 30px;
+    border: 2px solid white;
+    background-image: 
+    linear-gradient(315deg, white 50%,transparent 50%),
+    linear-gradient(45deg, black 50%,transparent 50%); 
+}
+.play-video{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+#about,#menu{
+    width: 100%;
+    margin-top: 100px;
+}
+#about h1 ,#menu h1,#chef h1 ,#order h1,#test h1{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 20px;
+}
+#about .title,#menu .title,#chef .title,#order .title
+,#test .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+#about hr.first-hr,#menu hr.first-hr,#chef hr.first-hr
+,#order hr.first-hr,#test hr.first-hr{
+    width:15%;
+    text-align: center;
+    margin: auto;
+    height: 2px;
+    background-color: #E88F2A;
+    border-color: #E88F2A;
+}
+#about hr.second-hr,#menu hr.second-hr,#chef hr.second-hr
+,#order hr.second-hr,#test hr.second-hr{
+    width:5%;
+    text-align: center;
+    margin: -6px auto auto auto;
+    height: 10px;
+    background-color: #E88F2A;
+    border-color: #E88F2A;
+    
+}
+#about .container,#chef .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+    margin: auto;
+}
+#about .container .image{
+    width: 45%;
+    margin-top: 40px;
+}
+#about .container .content{
+    width:55%;
+}
+#about .container img{
+    width:90%;
+}
+#about .container h3{
+     font-weight: 800;
+     margin-bottom: 30px;
+}
+#about .container p{
+    color: rgb(93, 92, 92);
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+#about .container .cards{
+    display: flex;
+    justify-content: space-between;  
+}
+#about .container .cards .card{
+    width:40%;
+}
+#about .container .cards .card .icon{
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+    background-color: #E88F2A;
+    outline: 8px solid #E88F2A;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+}
+.cards .card h2{
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    font-weight: 800;
+    font-size: 20px;
+}
+#about .background{
+    background-image: url('img/bg.jpg');
+    width: 100%;
+    height: 190px;
+}
+#about .icons{
+    width:85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    padding-top: 50px;
+}
+#about .icons .block{
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    font-weight: 800;
+    text-align: left;
+}
+#about .icons .icon{
+    width: 38px;
+    height: 38px;
+    background-color: #E88F2A;
+    border: 1px solid white;
+    outline: 10px solid #E88F2A;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    margin-right: 25px;
+    line-height: 37px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#about .icons p{
+    color: #E88F2A;
+}
+#menu{
+    height: 120vh;
+}
+#menu .container{
+    width: 80%;
+    margin: auto;
+}
+#menu .menu-type{
+    width:30%;
+    height: 70px;
+    display: flex;
+    margin: 50px auto 50px auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid white;
+    background-color: #2B2825;
+    outline:8px solid #2B2825;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    
+}
+#menu .menu-type p{
+    width: 90px;
+    height: 40px;
+    background-color: #2B2825;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu .menu-type p:hover{
+   background-color: #E88F2A;
+}
+#menu .cakes{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#menu .cakes .cake{
+    width:48%;
+    display: flex;
+}
+#menu .cakes .cake .description{
+    border:1px solid white;
+    background-color: #FAF3EB;
+    outline: 8px solid #FAF3EB ; 
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    margin: 6px auto;
+    padding: 7px;
+    justify-content: center;
+    
+}
+#menu .cakes .cake .description h3{
+   text-transform: uppercase;
+   margin-bottom: 2px;
+}
+#menu .cakes .cake .image h3{
+    background-color: #2B2825;
+    color: #E88F2A;
+   text-align: center;
+   padding: 5px;
+    height: 40px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+#service{
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url('img/service.jpg');
+    background-size: cover;
+}
+#service .container ,#contact .container{
+    width:80%;
+    margin: auto;
+    text-align: center;
+}
+#service .container .cards,#contact .cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+#service .container .card,#contact .card{
+    width:30%;
+    background-color: #E88F2A;
+    border: 1px solid white;
+    outline: 8px solid #E88F2A;
+    padding: 30px;
+    margin-top: -70px;
+    height: 220px;
+}
+#service .container .card h3{
+    text-transform: uppercase;
+    font-size: 23px;
+}
+#service .container .card p{
+    color: white;
+    letter-spacing: 0.7px;
+    margin: 15px;
+    padding-top: 18px;
+    line-height: 1.5;
+}
+#service .container .card a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+#service .container h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 60px;
+}
+#chef{
+    height: 90vh;
+}
+#chef .chef-photo{
+    width:32%;
+    margin-top: 2.5em;
+    text-align: center;
+}
+#chef .chef-photo img{
+    width: 100%;
+    display: block;
+    transition: 1s ease;
+}
+.img-img{
+    overflow: hidden;
+}
+
+#chef .chef-photo .description{
+    color: white;
+    background-color: #2B2825;
+    border: 1px solid white;
+    outline: 8px solid #2B2825;
+    width: 96%;
+    height: 5.125em;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 9px;
+}
+#chef .chef-photo .description h3{
+    text-transform: uppercase;
+    color: #E88F2A;
+    margin-bottom: 0.8em;
+    font-size: 20px;
+}
+#chef .chef-photo .image-details{
+    overflow: hidden;
+    position: relative;
+}
+#chef .image-details .icons{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width:35%;
+    margin: auto;
+    z-index: 34555;
+    position:absolute;  
+    bottom: 170px;
+    left: 120px;
+}
+
+#chef .image-details .icons a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none; 
+    margin: 0 10px;
+
+}
+.image-details:hover img,
+.image-details a:hover ~ img{
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+#chef .image-details .icons i:hover{
+    color: black;
+}
+#chef .chef-photo .image-details a{
+    text-decoration: none;
+}
+#chef .chef-photo img:hover{
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+#chef .image-details:hover .icons a{
+    display: block;
+}
+#order{
+    background-image: linear-gradient(rgba(15, 15, 15, 0.847),
+    rgba(15, 15, 15, 0.847)),url('img/offer.jpg');
+    background-size: cover;
+    height: 60vh;
+}
+#order .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center; 
+}
+#order h1{
+   color: white;
+   font-size: 40px;
+}
+#order p{
+    width: 55%;
+    color: white;
+    margin:2em auto 3em auto;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+#order .shop-btn{
+    background-color: #E88F2A;
+    color: white;
+    width:120px;
+    height: 35px;
+    border: 1px solid white;
+    outline: 8px solid #E88F2A;
+    text-transform: capitalize;
+    font-weight: bold; 
+    margin-right: 3em;
+    font-size: 15px;
+}
+#order .read-btn{
+    color: white;
+    width:120px;
+    height: 35px;
+    border: 1px solid white;
+    text-transform: capitalize;
+    font-weight: bold; 
+    background-color: #2b28259a;
+    outline: 8px solid #2b28259a;
+    font-size: 15px;
+}
+#order .read-btn:hover{
+    background-color: #2B2825;
+    outline-color: #2B2825;
+    cursor: pointer;
+}
+#test{
+    height: 65vh;
+}
+#test .clients{
+    width: 80%;
+    display: flex;
+    margin: 3em auto;
+    justify-content: space-between;
+}
+#test .clients .card{
+    width: 30%;
+    padding: 15px;
+    background-color: #2B2825;
+    border: 1px solid white;
+    outline: 8px solid #2B2825;
+}
+#test .clients .semi-transparent{
+    opacity: 0.4;
+}
+#test .clients .card .client-details{
+    display: flex;
+}
+#test .clients .card h2{
+    text-transform: uppercase;
+    color: #E88F2A;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    font-size: 22px;
+}
+#test .clients .card h5{
+    color: white;
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 17px;
+}
+#test .clients .card p{
+    margin-top: 13px;
+    color: white;
+    letter-spacing: 0.7px;
+    line-height: 1.4;
+}
+#quick{
+    height:40vh;
+    background-image: url('img/bg.jpg');
+}
+#quick .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    padding-top:10px ;
+}
+#quick .container .card{
+    width: 30%;
+    background-color: #E88F2A;
+    border: 1px solid white;
+    outline: 8px solid #E88F2A;
+    padding: 40px 15px;
+}
+#quick .container .card div{
+    display: flex;
+    justify-content: center;
+    margin: 13px auto;
+}
+#quick .container .card h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+}
+#quick .container .card .icon{
+    font-size: 32px;
+    margin-right: 10px;
+}
+#quick .container .card p{
+    color: white;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+}
+#quick h3{
+    text-transform: uppercase;
+    color: #E88F2A;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#quick p,#quick li{
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+#quick .contact .icon {
+    color: #E88F2A;
+}
+#quick .contact{
+    width:19%;
+    height: 280px;
+}
+#quick .contact .social{
+    display: flex;
+    justify-content: space-between;
+    width:55%;
+}
+#quick .contact .media, #chef .image-details .media{
+    background-color: #E88F2A;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    outline: 5px solid #E88F2A;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+#quick .link{
+    width:12%
+}
+#quick .links ul{
+    list-style: none;
+}
+#quick .links li{
+    text-transform: capitalize;
+}
+#quick .links li .arrow{
+    color: #E88F2A;
+}
+#quick .sletter{
+    width:22%;
+    height: 280px;
+
+}
+#quick .sletter .sign{
+    display: flex;
+    justify-content: flex-start;
+
+}
+#quick .sletter input{
+    padding: 9px;
+}
+#quick .sletter button{
+   padding: 9px;  
+   background-color: #E88F2A;
+   border: 0;
+   color: white;
+}
+footer{
+    background-color:rgba(0, 0, 0, 0.922);
+    height: 20vh;
+}
+footer .container{
+    width:40%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+footer p{
+    color: white;
+
+    margin-bottom: 25px;
+}
+footer a{
+    color: white;
+}
+#contact{
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    margin-top: 10em;
+}
+h1.x{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    font-size: 45px;
+}
+#contact .card{
+     height: 200px;
+}
+#contact .card .icon{
+    color: white;
+    font-size: 30px;
+}
+#contact .card h5{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 20px auto 15px auto;
+}
+#contact .card p{
+    color: white;
+}
+form{
+    width: 50%;
+    margin: 30px auto ;
+}
+#contact .main-form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+   
+}
+.main-form input,.main-form textarea {
+    margin: 10px;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+.main-form div{
+    display: flex;
+}
+textarea{
+      height: 110px;  
+}
+.main-form input.send-btn{
+      height: 40px;
+      background-color: #E88F2A;
+      color: white;
+      border: 1px solid white;
+      outline: 6px solid #E88F2A;
+      align-items: center;
+      margin: 10px;
+      font-size: 15px;
+      font-weight: 600; 
+}
